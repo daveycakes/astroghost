@@ -7,9 +7,10 @@ export type Props = {
   posts: Post[];
 };
 const { post, settings, posts } = Astro.props as Props;
+const showSignUp = false
 ---
 
-<section class="footer-cta">
+{showSignUp && <section class="footer-cta">
   <div class="inner">
     <h2>Sign up for more like this.</h2>
     <a class="footer-cta-button" href="#/portal">
@@ -17,7 +18,7 @@ const { post, settings, posts } = Astro.props as Props;
       <span>Subscribe</span>
     </a>
   </div>
-</section>
+</section>}
 
 <aside class="read-more-wrap">
   <div class="read-more inner">
